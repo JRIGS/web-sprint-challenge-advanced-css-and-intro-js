@@ -257,18 +257,18 @@ console.log(getArtistByIndex(artists, 8));
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born in and died in 20th century (1900-2000) 
 example born in 1901 and died in 1959 - included / born in 1889 and died in 1925 not included - should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(arr, minRange, maxRange){
+// function get20s(arr, minRange, maxRange){
 
-  let reviewRange = [];
-  for (let i=0; i < arr.length; i++){
-    if (arr[i].years >= minRange && arr[i].years < maxRange){
-      reviewRange.push(arr[i]);
-    }
-  }
-  return reviewRange;
-}
+//   let reviewRange = [];
+//   for (let i=0; i < arr.length; i++){
+//     if (arr[i].years >= minRange && arr[i].years < maxRange){
+//       reviewRange.push(arr[i]);
+//     }
+//   }
+//   return reviewRange;
+// }
 
-console.log(get20s(artists, '1900', '2000'));
+// console.log(get20s(artists, '1900', '2000'));
 
 
 
@@ -374,3 +374,33 @@ function randomize(/* Code here */){
 
 
  /* STRETCH 3: Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
+
+//  function get20s(arr, minRange, maxRange){
+
+//   let reviewRange = [];
+//   for (let i=0; i < arr.length; i++){
+//     if (arr[i].years >= minRange && arr[i].years < maxRange){
+//       reviewRange.push(arr[i]);
+//     }
+//   }
+//   return reviewRange;
+// }
+
+// console.log(get20s(artists, '1900', '2000'));
+
+
+const get20s = (arr, minYears, maxYears) => {
+    
+  return arr.filter(range => range.minYears >= minYears && range.maxYears < maxYears) 
+
+}
+
+ console.log(get20s(artists, '1900', '2000'));
+
+ 
+
+
+
+ // const getReviewByRating = (arr, rating) => {
+    
+  //     return arr.filter(review => review.rating >= rating) 
